@@ -1,6 +1,4 @@
 import { CSSProperties, ReactNode } from "react";
-import backgroundPatternMobile from "@/assets/background-pattern-mobile.svg";
-import backgroundPatternDesktop from "@/assets/background-pattern-desktop.svg";
 
 interface MyCustomCSS extends CSSProperties {
   "--bg-img-mobile": string;
@@ -15,8 +13,8 @@ export default function Background({ children }: { children: ReactNode }) {
             className="h-[calc(100%/3)] bg-cover bg-[url:--bg-img-mobile] md:bg-[url:--bg-img-desktop]"
             style={
               {
-                "--bg-img-mobile": `url(${backgroundPatternMobile})`,
-                "--bg-img-desktop": `url(${backgroundPatternDesktop})`,
+                "--bg-img-mobile": `url(/background-pattern-mobile.svg)`,
+                "--bg-img-desktop": `url(/background-pattern-desktop.svg)`,
               } as MyCustomCSS
             }
           ></div>
